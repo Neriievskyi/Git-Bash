@@ -1,0 +1,115 @@
+1)Посмотреть где я
+pwd
+
+2)Создать папку
+mkdir folder_name
+
+3)Зайти в папку
+cd folder_name
+
+4)Создать 3 папки
+mkdir folder_name_1 folder_name_2 folder_name_3
+
+5)Зайти в любую папку
+cd folder_name_1
+
+6)Создать 5 файлов (3 txt, 2 json)
+touch test_file_1.txt test_file_2.txt test_file_3.txt
+touch qq.json qa.json qc.json
+
+7)Создать 3 папки
+mkdir qa_2 qa_3 qa_4
+
+8)Вывести список содержимого папки
+ls -la
+
+9)Открыть любой txt файл
+cat test_file_1.txt
+
+10)Написать туда что-нибудь, любой текст
+cat >> test_file_1.txt hgygyghyhuhguyt
+
+11)Сохранить и выйти
+Ctrl+C
+
+12)Выйти из папки на уровень выше
+cd ..
+
+13)Переместить любые 2 файла, которые вы создали, в любую другую папку
+mv qa_2/q12.txt qa_2/q99.txt qa_3
+
+
+14)Скопировать любые 2 файла, которые вы создали, в любую другую папку
+cp qa_3/q12.txt qa_3/q99.txt qa_2
+
+15)Найти файл по имени
+find . -name "test_file.txt"
+
+16)Посмотреть содержимое в реальном времени
+tail -f test_file.txt
+
+17)Вывести несколько (3 строки) первых строк из тектового файла
+head -n3 test_file_3.txt
+
+18)Вывести несколько (2 строки) последних строк из тектового файла
+tail -n2 test_file_3.txt
+
+19)Просмотреть содержимое длинного файла
+less test_file_3.txt
+
+20)Вывести дату и время 
+date
+
+Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+Отправляю:
+curl http://162.55.220.72:5005/terminal-hw-request
+
+Ответ сервера:
+"Intro": "Hello!! This is your the first response from server",
+  "Tasks": {
+    "Task_1": "Send the next URL in terminal: http://162.55.220.72:5005/get_method?name=(set_your_String)&age=(set_your_number)",
+    "result": [
+      "Your_String",
+      "Your_number"
+    ]
+  }
+}
+
+Мой следующий шаг:
+curl "http://162.55.220.72:5005/get_method?name=Anton&age=36"
+
+2) Написать скрипт, который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+Создаю отдельную папку для этого задания:
+mkdir script_folder
+
+Создать файл:
+touch script_file.sh
+
+Внести изменентя в него:
+vim script_file.sh
+
+Нажать 'i'
+
+Ввести следующий скрипт:
+
+ cat script_file.sh
+#!/bin/sh
+cd script_folder/
+mkdir HWF_1 HWF_2 HWF_3
+cd HWF_1/
+touch F_1.txt F_2.txt F_3.txt F_4.json F_5.json
+mkdir F_1 F_2 F_3
+ls -la
+mv F_1.txt F_2.txt F_3/
+
+Выйти из режима редактирования 'esc', сохранить и выйти ':wq'
+
+Выполнить скрипт
+sh script_file.sh ./script_file
+
+
+
+
