@@ -102,10 +102,10 @@ fourteenthLine
  echo -n > /c/Users/aniku/group_30_free/dir_1/tf_4.txt
 
  21. Найти путь к файлам у которых есть  “tf” в названии.
- find \dir_1 -name tf*.txt
+ find -name 'tf*.txt'
 
  22. Найти путь к файлам у которых есть  “tf” в названии и буквы в любом регистре.
-find \dir_1 -iname tf*.txt
+find -iname 'tf*.txt'
 
  23. Найти строки в файлах где есть комбинация букв “sec” в текущей папке
  grep sec *
